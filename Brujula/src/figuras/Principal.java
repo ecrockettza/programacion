@@ -19,8 +19,10 @@ public static void main(String[] args) {
 		Iterator <Figura> it = listafiguras.iterator();
 		 while (it.hasNext()){
 	        	Figura p = it.next();
-	        	System.out.println(p);
+	        	if (p==triangulo)
+	        	p.Pintar();;
+	        	}
 	        }
 	}
 
-}
+
