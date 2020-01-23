@@ -9,29 +9,27 @@ public class Pizza_Ethan_Crockett {
 	
 	public Pizza_Ethan_Crockett(String t, String m)
 	{ this.tipus=t;
-		this.mida=m;
-		this.pedidos= pedidos+1; }
+	  this.mida=m;
+	  this.pedidos= pedidos+1; }
+	
 	public void Servir()
 	{ System.out.println("Esta pizza se ha servido");
-		this.servidos= servidos + 1;}
+	  this.servidos= servidos + 1;}
+	
+	public static int getServidos() 
+	{return servidos;}
+	public static int getPedidos() 
+	{return pedidos;}
 	
 	public String getTipus() 
 	{return tipus;}
 	public void setTipus(String tipus) 
 	{this.tipus = tipus;}
 
-	public static int getServidos() 
-	{return servidos;}
-	public static int getPedidos() 
-	{return pedidos;}
-	
 	public String getMida() 
 	{return mida;}
 	public void setMida(String mida) 
 	{this.mida = mida;}
-	
-	
-	
 	
 	
 	public static void main(String[] arg) {
