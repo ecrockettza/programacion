@@ -3,6 +3,7 @@ package figuras;
 public class Triangulo extends Figura{
 
 	protected String nombre="Triangulo";
+	protected final boolean VALOR=true;
 	
 	@Override 
 	public void Pintar()
