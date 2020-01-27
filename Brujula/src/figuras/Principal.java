@@ -22,7 +22,7 @@ public static void main(String[] args) {
 		Iterator <Figura> it = listafiguras.iterator();
 		 while (it.hasNext()){
 	        	Figura p = it.next();
-	        	if (p.getParalelogramo.equals(true))
+	        	if (p.equals(triangulo))
 	        	p.Pintar();
 	        	}
 		 Iterator <Figura> ite = listafiguras.iterator();
