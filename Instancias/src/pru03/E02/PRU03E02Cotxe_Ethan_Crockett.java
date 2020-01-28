@@ -4,8 +4,9 @@ import java.util.Random;
 public class PRU03E02Cotxe_Ethan_Crockett extends CotxeAbstracte implements InterfaceCotxe{
 	//Creo un estado del coche, también creo las revoluciones con valor 0 y estancio un random.
 	EstatsMotorCotxe estado =EstatsMotorCotxe.Aturat;
-	int revoluciones;
-	Random numerorandom = new Random();
+	//Creo las variables que voy a utilizar en la clase una de revoluciones y otra para un random
+	private int revoluciones;
+	private Random numerorandom = new Random();
 	
 	//Se hereda el constructor de la clase abstracata
 	public PRU03E02Cotxe_Ethan_Crockett(String marca, String model, TipusCanvi tipuscanvi) {
@@ -19,6 +20,7 @@ public class PRU03E02Cotxe_Ethan_Crockett extends CotxeAbstracte implements Inte
 		/**Utilizo una exception para que salga un mensaje de error personalizado y hago un random para conseguir las revoluciones
 		 * Compruebo si el coche esta en marcha si no lo esta lo pongo en marcha y si lo esta hago un throw de la exception
 		 */
+		
 		if (estado.equals(EstatsMotorCotxe.Aturat)){
 			this.estado= EstatsMotorCotxe.EnMarxa;
 			revoluciones = numerorandom.nextInt(6500);
@@ -50,14 +52,16 @@ public class PRU03E02Cotxe_Ethan_Crockett extends CotxeAbstracte implements Inte
 
 	@Override
 	public void aturarMotor() throws Exception {
-		// Sobreescribimos el metodo y utilizamos el enum para parar el motor 
+		/*Sobreescribimos el metodo y utilizamos el enum para parar el motor, ademas las revoluciones se ponen en cero.
+		 *Con un if compruebo si el motor ya estaba apagado. Si no lo estaba, lo apago, pero si lo estaba hago un throw de la exception 
+		 *con un mensaje de error personalizado  
+		 */
 		if (estado.equals(EstatsMotorCotxe.EnMarxa)){
 			this.estado= EstatsMotorCotxe.Aturat;
 			revoluciones=0;
 			System.out.println(estado);
 		}
 		else{
-			revoluciones = numerorandom.nextInt(6500);
 			throw new Exception("El motor ya estaba apagado");}
 		
 	}
