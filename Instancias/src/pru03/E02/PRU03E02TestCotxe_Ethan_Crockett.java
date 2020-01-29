@@ -21,7 +21,7 @@ public class PRU03E02TestCotxe_Ethan_Crockett {
 
 	public static void main(String[] args) {
 		//Instanciamos para comprobar el funcionamiento
-		PRU03E02Cotxe_Ethan_Crockett coche1 = new PRU03E02Cotxe_Ethan_Crockett("opel", "astra", TipusCanvi.CanviAutomatic);
+		PRU03E02Cotxe_2_Ethan_Crockett coche1 = new PRU03E02Cotxe_2_Ethan_Crockett("opel", "astra", TipusCanvi.CanviAutomatic);
 		
 		//Hago un un print de las revoluciones que deberian ser 0
 		System.out.println(coche1.getRevolucions());
@@ -49,6 +49,20 @@ public class PRU03E02TestCotxe_Ethan_Crockett {
 		
 		//Compruebo el funcionameinto el metodo comprovaMotor
 		System.out.println(coche1.comprovaMotor());
+		
+		System.out.println(coche1.ComprobarCambio());
+		try {
+			coche1.CanviarMarxaAutomatic("+");
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		System.out.println(coche1.ComprobarCambio());
+		try {
+			coche1.CanviarMarxaAutomatic("+");
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		System.out.println(coche1.ComprobarCambio());
 		
 	}
 }
