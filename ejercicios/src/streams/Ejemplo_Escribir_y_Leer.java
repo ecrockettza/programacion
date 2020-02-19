@@ -92,12 +92,9 @@ class Leer_y_Escribir{
 		
 		for (i = 0; i <vaciochar.length-1; i ++) {
 			for (j = 0; j <vaciochar.length - i - 1; j ++) {
-				
-				if(ArrayOrder(char[] String1, char[] String2)) {
 					aux = palabras [j + 1];
 					palabras [j + 1] = palabras [j];
 					palabras [j] = aux;
-		            }
 				}
 			}
 		
